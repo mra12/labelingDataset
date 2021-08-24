@@ -33,8 +33,8 @@ DOI = {10.3390/s21165671}\
 There are two ways to use the file:
 1. Extract the gzip file and then you will have a csv output file. For that you need to install gzip and then extracting .csv.gz. The user may use the command `gunzip labelingDataset.csv.gz`
 2. Extract information from the zipped file directly (following the same logic of [AndroZoo's csv](https://androzoo.uni.lu/lists)):
-   To extract the first column and save to a file called `list_of_selected_sha256`, run the following command:\ `zcat labelingDataset.csv.gz | cut -d',' -f1 > list_of_selected_sha256`  
-   To obtain rows of apk hashes that were first seen after the 1st of May, 2016, run this command:\ `zcat labeling_dataset.csv.gz | grep -v ',snaggamea' | awk -F, '{if ( $2 >= "2016-05" ) {print} }'`
+   To extract the first column and save to a file called `list_of_selected_sha256`, run the following command:<br /> `zcat labelingDataset.csv.gz | cut -d',' -f1 > list_of_selected_sha256`  
+   To obtain rows of apk hashes that were first seen after the 1st of May, 2016, run this command:<br /> `zcat labeling_dataset.csv.gz | grep -v ',snaggamea' | awk -F, '{if ( $2 >= "2016-05" ) {print} }'`
    
 
 
