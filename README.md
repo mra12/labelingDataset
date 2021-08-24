@@ -1,9 +1,10 @@
 # labeling Dataset
-The csv of the labels that was extracted from the VirusTotal reports is provided in 'labeling_dataset.csv.gz' . A cell's value of _'-1'_ is used whenever there was no result from the engine for the given apk file hash value. The column names are provided in 'cols_labeling_dataset.csv'.
-##If you use information from this repo, please cite our paper
+The csv of the labels that was extracted from the VirusTotal reports is provided in `labeling_dataset.csv.gz` . A cell's value of "_-1_" is used whenever there was no result from the engine for the given apk file hash value. The column names are provided in `cols_labeling_dataset.csv`.
+## If you use information from this repo, please cite our paper
 Rashed M, Suarez-Tangil G. An Analysis of Android Malware Classification Services. Sensors. 2021; 21(16):5671. https://doi.org/10.3390/s21165671
 
-######BibTeX
+###### BibTeX
+
 @Article{s21165671,
 AUTHOR = {Rashed, Mohammed and Suarez-Tangil, Guillermo},
 TITLE = {An Analysis of Android Malware Classification Services},
@@ -18,13 +19,13 @@ DOI = {10.3390/s21165671}
 }
 
 ## Required Software:
-1. gunzip: you may install it using the following command 'apt-get install gzip'
-## How to use the file:
+1. `gunzip`: you may install it using the following command `apt-get install gzip` in Debian-based Linux
+## How to use the file?
 There are two ways to use the file:
-1. Extract the gzip file and then you will have a csv output file. For that you need to install gzip and then extracting .csv.gz. The user may use the command 'gunzip labelingDataset.csv.gz'
+1. Extract the gzip file and then you will have a csv output file. For that you need to install gzip and then extracting .csv.gz. The user may use the command `gunzip labelingDataset.csv.gz`
 2. Extract information from the zipped file directly (following the same logic of [AndroZoo's csv](https://androzoo.uni.lu/lists)):
-   To extract the first column and save to a file called 'list_of_selected_sha256', run the following command: 'zcat labelingDataset.csv.gz | cut -d',' -f1 > list_of_selected_sha256'  
-   To obtain rows of apk hashes that were first seen after the 1st of May, 2016, run this command: 'zcat labeling_dataset.csv.gz | grep -v ',snaggamea' | awk -F, '{if ( $2 >= "2016-05" ) {print} }''
+   To extract the first column and save to a file called `list_of_selected_sha256`, run the following command: `zcat labelingDataset.csv.gz | cut -d',' -f1 > list_of_selected_sha256`  
+   To obtain rows of apk hashes that were first seen after the 1st of May, 2016, run this command: `zcat labeling_dataset.csv.gz | grep -v ',snaggamea' | awk -F, '{if ( $2 >= "2016-05" ) {print} }'`
    
 
 
