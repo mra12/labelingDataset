@@ -1,7 +1,9 @@
 # labeling Dataset
 A dataset of labels extracted from VirusTotal reports of **2.47 million Android apk hashes**.
 
-## Information
+## Background
+This dataset was used in the experiments of our publication titled [An Analysis of Android Malware Classification Services
+](https://www.mdpi.com/1424-8220/21/16/5671) \
 The csv of the labels that was extracted from the VirusTotal reports is provided in `labeling_dataset.csv.gz` . A cell's value of `-1` is used whenever there was no result from the 
 engine for the given apk file hash value. The column names are provided in `cols_labeling_dataset.csv`. 
 ###### Note 
